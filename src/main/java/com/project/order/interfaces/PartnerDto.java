@@ -27,7 +27,7 @@ public class PartnerDto {
         private String email;
 
         public PartnerCommand toCommand(){
-            PartnerCommand.builder()
+            return PartnerCommand.builder()
                     .partnerName(partnerName)
                     .businessNo(businessNo)
                     .email(email)
