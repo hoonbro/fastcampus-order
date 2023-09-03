@@ -1,7 +1,7 @@
 package com.project.order.common.exception;
 
 
-import dev.practice.order.common.response.ErrorCode;
+import com.project.order.common.response.ErrorCode;
 
 public class IllegalStatusException extends BaseException {
 
