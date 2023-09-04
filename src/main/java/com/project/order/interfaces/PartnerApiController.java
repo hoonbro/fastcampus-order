@@ -2,10 +2,10 @@ package com.project.order.interfaces;
 
 import com.project.order.appllication.partner.PartnerFacade;
 import com.project.order.common.response.CommonResponse;
-import com.project.order.domain.partner.PartnerCommand;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +17,7 @@ public class PartnerApiController {
     private final PartnerFacade partnerFacade;
 
     @PostMapping
-    public CommonResponse registerPartner(PartnerDto.RegisterRequest request){
+    public CommonResponse registerPartner(@RequestBody PartnerDto.RegisterRequest request){
         // 1. 외부에서 전달된 파라미터 (dto) -> Command, Criteria convert
         var command = request.toCommand();
 
