@@ -5,10 +5,7 @@ import com.project.order.domain.partner.PartnerCommand;
 import com.project.order.domain.partner.PartnerInfo;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 public class PartnerDto {
 
@@ -38,6 +35,7 @@ public class PartnerDto {
     @Getter
     @Builder
     @ToString
+    @AllArgsConstructor
     public static class RegisterResponse {
         private final String partnerToken;
         private final String partnerName;
